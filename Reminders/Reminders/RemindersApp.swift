@@ -1,17 +1,17 @@
-//
-//  RemindersApp.swift
-//  Reminders
-//
-//  Created by Saxon Bobart on 17/4/2026.
-//
-
+import SQLiteData
 import SwiftUI
 
 @main
 struct RemindersApp: App {
+    init() {
+        prepareDependencies {
+            $0.defaultDatabase = try! appDatabase()
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

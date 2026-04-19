@@ -49,7 +49,16 @@ Carthage/Build/
 .env.*
 .env.local
 
+# ---------- SQLite (GRDB) ----------
+# The app's local DB lives under Application Support on-device, outside the repo.
+# These patterns are a safety net in case a sample/fixture DB ever lands in the tree.
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
 # ---------- Misc ----------
 *.log
 .tuist-*
 node_modules/
+.claude/worktrees/
